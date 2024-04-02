@@ -1,0 +1,81 @@
+<div class="parent">
+  <header>
+    <nav>
+      <div class="logo">FormYfinite</div>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section >
+      <router-outlet></router-outlet>
+    </section>
+    <!-- Hero Section -->
+    <section id="hero" *ngIf="router.url == '/'">
+      <div class="hero-content">
+        <h1>Revolutionize Form Creation with FormYfinite</h1>
+        <p>Create dynamic and interactive forms effortlessly.</p>
+        <a (click)="navigate('auth')" class="btn cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" *ngIf="router.url == '/'">
+      <h2>Key Features</h2>
+      <div class="feature">
+        <h3>Intuitive Form Builder</h3>
+        <p>Create customized forms with a user-friendly drag-and-drop interface.</p>
+      </div>
+      <div class="feature">
+        <h3>Collaboration</h3>
+        <p>Collaborate with your team in real-time to build and manage forms efficiently.</p>
+      </div>
+      <div class="feature">
+        <h3>Data Collection</h3>
+        <p>Effortlessly collect and analyze data with powerful form submission features.</p>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" *ngIf="router.url == '/'">
+      <h2>How It Works</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Sign Up</h3>
+          <p>Create your FormYfinite account to start building forms.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Build Forms</h3>
+          <p>Use the intuitive form builder to create customized forms for your needs.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Collect Data</h3>
+          <p>Effortlessly collect data from users through interactive forms.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Have questions or need assistance? Reach out to our support team.</p>
+      <a href="mailto:support@formyfinite.com" class="btn cta-button">Email Support</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 FormYfinite. All rights reserved.</p>
+  </footer>
+</div>

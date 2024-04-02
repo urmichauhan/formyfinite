@@ -1,0 +1,57 @@
+.row-main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.opt {
+  height: 70px;
+  // border: 1px gray dotted;
+  margin: 3px;
+}
+
+.h-200 {
+  margin: 10px;
+  height: 200px;
+}
+
+.width20 {
+  width: 20vw;
+}
+
+.width75 {
+  width: 75vw;
+}
+
+.toolbar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.tool-button {
+  margin: 0.1vw;
+  /* Margin relative to viewport width */
+  text-align: center;
+  white-space: pre-wrap;
+  width: 9vw;
+  /* Width relative to viewport width */
+  height: 10vh;
+  /* Height relative to viewport height */
+  font-size: 1vw;
+  /* Font size relative to viewport width */
+  border-radius: 0.5vw;
+  /* Border radius relative to viewport width */
+  transition: all 0.3s ease;
+  padding: 0.1vw;
+  /* Padding relative to viewport width */
+  border: 2px thin #8da0b4;
+}
+
+.tool-button:hover {
+  background-color: #8da0b4;
+  color: #fff;
+}
+
+.tool-button i {
+  margin-right: 10px;
+}

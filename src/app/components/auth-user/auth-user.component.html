@@ -1,0 +1,38 @@
+<div class="combined-container">
+    <div *ngIf="isLoginFormVisible; else registerForm">
+      <h2>Login to FormYfinite</h2>
+      <form [formGroup]="loginForm" >
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username" placeholder="Enter your username">
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" placeholder="Enter your password">
+  
+        <button type="submit" [disabled]="loginForm.invalid" (click)="onSubmitLogin()">Login</button>
+      </form>
+  
+      <p (click)="toggleForm()">Don't have an account? Register here.</p>
+    </div>
+  
+    <ng-template #registerForm>
+      <h2>Create an Account</h2>
+      <form [formGroup]="registerForm" >
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username" placeholder="Enter your username">
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" placeholder="Enter your email">
+  
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" placeholder="Enter your password">
+  
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword" placeholder="Confirm your password">
+  
+        <button type="submit" [disabled]="registerForm.invalid" (click)="onSubmitRegister()">Register</button>
+      </form>
+  
+      <p (click)="toggleForm()">Already have an account? Login here.</p>
+    </ng-template>
+  </div>
+  

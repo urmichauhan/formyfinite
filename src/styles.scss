@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Lucida Sans Unicode', sans-serif;
+}
+.btn {
+    cursor: pointer;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
