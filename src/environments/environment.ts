@@ -18,10 +18,7 @@ export const environment = {
   //apiUrl: 'https://yesrapidosduat.yesbank.in/internaladmin/sd/appiyo/',
   // apiUrl: 'https://13.76.216.136/internaladmin/sd/appiyo/',
   // documentUrl: 'https://13.76.216.136/internaladmin/sd/appiyo/d/drive/docs/',
-  // apiUrl: 'https://yesrapidouat.yesbank.in/sdssp/d/dev/sdssp/appiyo/',
-  // documentUrl: 'https://yesrapidouat.yesbank.in/sdssp/d/dev/sdssp/appiyo/d/drive/docs/',
-  // apiUrl: 'http://128.199.227.253/internaladmin/sd/appiyo/',
-  // documentUrl: 'http://128.199.227.253/internaladmin/sd/appiyo/d/drive/docs/',
+  
   apiUrl: 'https://128.199.227.253/internaladmin/sd/appiyo/',
   documentUrl: 'https://128.199.227.253/internaladmin/sd/appiyo/d/drive/docs/',
   apiVersion: 'v2',

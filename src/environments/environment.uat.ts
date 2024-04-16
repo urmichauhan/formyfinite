@@ -2,7 +2,7 @@ export const environment = {
   production: true,
 
   // For UAT & DEV
-  apiUrl: '/sdssp/appiyo/',
+  apiUrl: '',
   documentUrl: '/internaladmin/sd/appiyo/d/drive/docs/',
   apiVersion: 'v2',
   aesPublicKey: 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBALSLmgdCK+NnMf8gM0i6nUaWZNqKO2LZqGgys7pDQeRdkej8EIEefrJ9ThtP2PO0hlaiqf+3NFrEP7nJp3HGUeUCAwEAAQ==',

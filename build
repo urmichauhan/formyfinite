@@ -57,9 +57,9 @@ then
     echo "##################################"
 fi
 
-cd sdssp && tar -czvf ../sdssp-$DATE-$TIME-$version-$env.tar.gz * && cd ..
+cd npx angular-cli-ghpages --dir=dist/formyfinite && tar -czvf ../npx angular-cli-ghpages --dir=dist/formyfinite-$DATE-$TIME-$version-$env.tar.gz * && cd ..
 
-sudo rm -rf sdssp
+sudo rm -rf npx angular-cli-ghpages --dir=dist/formyfinite
 
 echo $DATE
 echo $TIME
