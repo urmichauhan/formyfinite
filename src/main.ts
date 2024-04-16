@@ -13,7 +13,7 @@ if (environment.production) {
    * 
    * To block console enable comment
   *************************************/
-  if (environment.name == 'UAT' || environment.name == 'PROD') {
+  if (environment.production == true) {
     if (window) {
       window.console.log = function () { };
       window.console.info = function () { };

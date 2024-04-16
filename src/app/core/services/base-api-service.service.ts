@@ -17,7 +17,8 @@ export class BaseAPIService {
   // isRetailBanking: boolean = false;
   // isLoan: boolean = false;
 
-  baseUrl = environment.apiUrl;
+  baseUrl = "";
+  apiUrl = "";
   objs: any = [];
   abc: any;
   acde: any;
@@ -77,7 +78,7 @@ export class BaseAPIService {
     let ProcessVariables = {
       'srId': srID
     }
-    const apiUrl = `${environment.apiUrl}d/download/pdf?content_var=modelData&template_var=template&processVariables={"processId":"${processId}","projectId":"${projectId}","ProcessVariables":${JSON.stringify(ProcessVariables)}}&t=${timestamp}`;
+    const apiUrl = `${this.apiUrl}d/download/pdf?content_var=modelData&template_var=template&processVariables={"processId":"${processId}","projectId":"${projectId}","ProcessVariables":${JSON.stringify(ProcessVariables)}}&t=${timestamp}`;
     return this.http.get(apiUrl, { responseType: "blob" });
   }
 

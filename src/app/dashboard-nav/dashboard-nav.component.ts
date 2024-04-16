@@ -20,6 +20,7 @@ import { BaseAPIService } from '../core/services/base-api-service.service';
 export class DashboardNavComponent {
   APP_VERSION = ApplicationVersion.APP_VERSION;
   online$: Observable<boolean>;
+  date = new Date();
  
   constructor(
     location: Location,
@@ -66,7 +67,7 @@ export class DashboardNavComponent {
   navigate(url) {
     
     this.router.navigate([url]);
-    console.log('url',this.router.url)
+    console.log('url',this.router.url);
   }
 
   
@@ -77,6 +78,14 @@ export class DashboardNavComponent {
         this.auth.alertToUser('You are offline', false, true);
       }
     });
+  }
+
+  /**
+   * @description send email method
+   */
+  emailSend() {
+    console.log('url',this.router.url);
+    window.open("mailto:support@formyfinite.com","_blank"); 
   }
 
 }

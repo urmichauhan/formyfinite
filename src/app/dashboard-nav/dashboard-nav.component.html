@@ -1,7 +1,7 @@
 <div class="parent">
   <header>
     <nav>
-      <div class="logo">FormYfinite</div>
+      <div class="logo"><img src="../../assets/images/header/logo.png"></div>
       <ul>
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
@@ -16,7 +16,7 @@
       <router-outlet></router-outlet>
     </section>
     <!-- Hero Section -->
-    <section id="hero" *ngIf="router.url == '/'">
+    <section id="hero" *ngIf="router.url == '/' || router.url == '/#features' || router.url == '/#how-it-works' || router.url == '/#contact'">
       <div class="hero-content">
         <h1>Revolutionize Form Creation with FormYfinite</h1>
         <p>Create dynamic and interactive forms effortlessly.</p>
@@ -25,7 +25,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" *ngIf="router.url == '/'">
+    <section id="features" *ngIf="router.url == '/' || router.url == '/#features' || router.url == '/#how-it-works' || router.url == '/#contact' ">
       <h2>Key Features</h2>
       <div class="feature">
         <h3>Intuitive Form Builder</h3>
@@ -42,7 +42,7 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" *ngIf="router.url == '/'">
+    <section id="how-it-works" *ngIf="router.url == '/' || router.url == '/#features' || router.url == '/#how-it-works' || router.url == '/#contact'">
       <h2>How It Works</h2>
       <div class="step">
         <div class="step-number">1</div>
@@ -71,11 +71,11 @@
     <section id="contact">
       <h2>Contact Us</h2>
       <p>Have questions or need assistance? Reach out to our support team.</p>
-      <a href="mailto:support@formyfinite.com" class="btn cta-button">Email Support</a>
+      <a (click)="emailSend()" class="btn cta-button">Email Support</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2023 FormYfinite. All rights reserved.</p>
+    <p>&copy; {{date.getFullYear()}} FormYfinite. All rights reserved.</p>
   </footer>
 </div>
