@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
+/formyfinite
 
 # Node
 /node_modules
