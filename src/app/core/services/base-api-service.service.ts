@@ -68,7 +68,7 @@ export class BaseAPIService {
   }
 
   authError() {
-    this.router.navigateByUrl('/invalid');
+    this.router.navigateByUrl('formyfinite/invalid');
   }
 
   downloadSRDoc(srID:any): Observable<any> {

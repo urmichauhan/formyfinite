@@ -171,7 +171,7 @@ export class TokenStorage {
       }
     } catch (err) {
       this.clear();
-      this.router.navigate(['/login']);
+      this.router.navigate(['/formyfinite']);
     }
   }
 
@@ -185,7 +185,7 @@ export class TokenStorage {
       }
     } catch (err) {
       this.clear();
-      this.router.navigate(['/login']);
+      this.router.navigate(['/formyfinite']);
     }
   }
 

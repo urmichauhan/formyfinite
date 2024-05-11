@@ -62,11 +62,14 @@ export class DashboardNavComponent {
   }
 
   /**
-   * @description Navigation method @param url
+   * @description Navigation method @param url @param ref reference id
    */
-  navigate(url) {
-    
-    this.router.navigate([url]);
+  navigate(url,ref) {
+    if(ref){
+      this.router.navigate([url],{ fragment: ref });
+    } else {
+      this.router.navigate([url]);
+    }
     console.log('url',this.router.url);
   }
 

@@ -43,7 +43,9 @@
     display: inline-block;
     cursor: pointer;
   }
-  
+  a {
+    cursor: pointer;
+  }
   .tooltip-text {
     visibility: hidden;
     width: fit-content; /* Adjust width as needed */

@@ -7,13 +7,13 @@
         <div class="card-text">
           <div class="input-group mb-1">
             <span class="input-group-text">Form Title</span>
-            <textarea class="form-control" rows="1" aria-label="Form Title"></textarea>
+            <textarea class="form-control" formControlName="title" rows="1" aria-label="Form Title"></textarea>
           </div>
         </div>
         <div class="card-text">
           <div class="input-group">
             <span class="input-group-text">Form Description</span>
-            <textarea class="form-control" aria-label="Form Description"></textarea>
+            <textarea class="form-control" formControlName="description" aria-label="Form Description"></textarea>
           </div>
         </div>
       </div>
@@ -101,19 +101,23 @@
     <div>
       <div class="collapse collapse-horizontal" id="collapseWidthExample">
         <div class="card" style="width: 90%">
+          <div class="card-header text-center text-bg-secondary ">
+            <h5 class="card-title">{{formMaker?.value?.title}}</h5>
+            <p class="card-text">{{formMaker?.value?.description}}</p>
+          </div>
           <div class="" *ngFor="let field of arrayForm.value;let ip=index;">
             <!-- text -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 1">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 1">
               <label class="form-label">{{field?.title}}</label>
               <input type="text" class="form-control" placeholder="text">
             </div>
             <!-- textarea -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 2">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 2">
               <label class="form-label">{{field?.title}}</label>
               <textarea class="form-control" rows="3"></textarea>
             </div>
             <!-- radio -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 3">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 3">
               <label class="form-label">{{field?.title}}</label>
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -123,7 +127,7 @@
               </div>
             </div>
             <!-- checkbox -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 4">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 4">
               <label class="form-label">{{field?.title}}</label>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -133,7 +137,7 @@
               </div>
             </div>
             <!-- dropdowm -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 5">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 5">
               <label class="form-label">{{field?.title}}</label>
               <div class="dropdown">
                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -148,29 +152,29 @@
               </div>
             </div>
             <!-- date -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 6">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 6">
               <div class="field">
                 <label>{{field?.title}}</label>
                 <input type="date" placeholder="" class="form-control" id="myDateField" />
               </div>
             </div>
             <!-- file -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 7">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 7">
               <label for="formFile" class="form-label">{{field?.title}}</label>
               <input class="form-control" type="file" id="formFile">
             </div>
             <!-- numbber -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 8">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 8">
               <label for="formFile" class="form-label">{{field?.title}}</label>
               <input class="form-control" type="number" placeholder="Default input" aria-label="default input example">
             </div>
             <!-- email -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 9">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 9">
               <label for="exampleFormControlInput1" class="form-label">{{field?.title}}</label>
               <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
             <!-- password -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 10">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 10">
               <label for="inputPassword5" class="form-label">{{field?.title}}</label>
               <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
               <div id="passwordHelpBlock" class="form-text">
@@ -179,13 +183,13 @@
               </div>
             </div>
             <!-- label info -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 11">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 11">
               <div class="alert alert-light" role="alert">
                 {{field?.title}}
               </div>
             </div>
             <!-- Link -->
-            <div class="card card-body text-bg-light border-light" *ngIf="field.id == 12">
+            <div class="card card-body text-bg-light border-light-subtle border-bottom" *ngIf="field.id == 12">
               <div class="alert alert-light" role="alert">
                 <a class="alert-link">{{field?.title}}</a>
               </div>

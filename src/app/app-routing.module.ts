@@ -9,13 +9,13 @@ const routes: Routes = [
   //   redirectTo: 'not-found',
   //   pathMatch: 'full'
   // },
-  // {
-  //   path: '',
-  //   redirectTo: 'dashboard',
-  //   pathMatch: 'full'
-  // },
   {
     path: '',
+    redirectTo: 'formyfinite',
+    pathMatch: 'full'
+  },
+  {
+    path: 'formyfinite',
     loadChildren: () => import('./components/dashboard.module').then(m => m.DashboardModule)
   },
   {
@@ -30,7 +30,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    anchorScrolling: 'enabled'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

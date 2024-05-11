@@ -28,10 +28,8 @@ import { BsModalService } from 'ngx-bootstrap/modal';
     NgxSpinnerModule,
     HttpClientModule,
     CoreModule,
-    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxSpinnerModule,
     DashboardModule
     // MaterialModule,
   ],

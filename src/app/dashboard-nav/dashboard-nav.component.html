@@ -3,9 +3,9 @@
     <nav>
       <div class="logo"><img src="../../assets/images/header/logo.png"></div>
       <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a (click)="navigate('/formyfinite','features')">Features</a></li>
+        <li><a (click)="navigate('/formyfinite','how-it-works')">How It Works</a></li>
+        <li><a (click)="navigate('/formyfinite','contact')">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -16,16 +16,16 @@
       <router-outlet></router-outlet>
     </section>
     <!-- Hero Section -->
-    <section id="hero" *ngIf="router.url == '/' || router.url == '/#features' || router.url == '/#how-it-works' || router.url == '/#contact'">
+    <section id="hero" *ngIf="router.url == '/formyfinite' || router.url == '/formyfinite#features' || router.url == '/formyfinite#how-it-works' || router.url == '/formyfinite#contact'">
       <div class="hero-content">
         <h1>Revolutionize Form Creation with FormYfinite</h1>
         <p>Create dynamic and interactive forms effortlessly.</p>
-        <a (click)="navigate('auth')" class="btn cta-button">Get Started</a>
+        <a (click)="navigate('formyfinite/auth','')" class="btn cta-button">Get Started</a>
       </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" *ngIf="router.url == '/' || router.url == '/#features' || router.url == '/#how-it-works' || router.url == '/#contact' ">
+    <section id="features" *ngIf="router.url == '/formyfinite' || router.url == '/formyfinite#features' || router.url == '/formyfinite#how-it-works' || router.url == '/formyfinite#contact' ">
       <h2>Key Features</h2>
       <div class="feature">
         <h3>Intuitive Form Builder</h3>
@@ -42,7 +42,7 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" *ngIf="router.url == '/' || router.url == '/#features' || router.url == '/#how-it-works' || router.url == '/#contact'">
+    <section id="how-it-works" *ngIf="router.url == '/formyfinite' || router.url == '/formyfinite#features' || router.url == '/formyfinite#how-it-works' || router.url == '/formyfinite#contact'">
       <h2>How It Works</h2>
       <div class="step">
         <div class="step-number">1</div>

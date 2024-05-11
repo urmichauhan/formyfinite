@@ -44,7 +44,7 @@ export class AuthUserComponent {
 
   onSubmitLogin() {
     // Add logic for handling login using this.loginForm.value
-    this.router.navigate(['/form-builder']);
+    this.router.navigate(['formyfinite/form-builder']);
   }
 
   onSubmitRegister() {

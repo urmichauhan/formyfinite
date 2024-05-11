@@ -20,6 +20,8 @@ export class FormBuilderComponent {
 
   ngOnInit(): void {
     this.formMaker = this.fb.group({
+      title : this.fb.control(""),
+      description : this.fb.control(""),
       arrayForm: this.fb.array([])
     });
     this.controlTypes = [
