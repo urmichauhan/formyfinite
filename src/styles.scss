@@ -1,0 +1,119 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: Cambria, serif;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Style for WebKit browsers (Safari, Chrome, etc.) */
+*::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Track color */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Thumb color */
+  border-radius: 5px;
+  /* Rounded corners for the thumb */
+}
+
+
+html {
+  scrollbar-width: thin;
+  /* Width of the scrollbar */
+}
+
+body {
+  scrollbar-color: #888 #f1f1f1;
+  /* Thumb and track color */
+}
+
+/* Apply scrollbar styles to all elements */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f9f6f6 #d9d9d9;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: fit-content;
+  /* Adjust width as needed */
+  background-color: #7c7c7c;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 3px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
+  /* Adjust font size */
+  line-height: 1.5;
+  /* Adjust line height for readability */
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* TOASTR BUGFIX */
+#toast-container>div {
+  opacity: 1;
+}
+
+.toast {
+  font-size: initial !important;
+  border: initial !important;
+  backdrop-filter: blur(0) !important;
+}
+
+.toast-success {
+  background-color: #51A351 !important;
+}
+
+.toast-error {
+  background-color: #BD362F !important;
+}
+
+.toast-info {
+  background-color: #2F96B4 !important;
+}
+
+.toast-warning {
+  background-color: #F89406 !important;
+}
+
+.toast-top-right {
+  top: 50px;
+  right: 24px;
+  position: fixed;
+}

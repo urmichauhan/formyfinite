@@ -1,0 +1,23 @@
+.d-flex {
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background: white;
+    color: white;
+}
+
+.error {
+    color: #404040;
+    margin-top: 180px;
+}
+
+.d-flex-c {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}

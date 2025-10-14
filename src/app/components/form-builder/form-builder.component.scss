@@ -1,0 +1,72 @@
+.row-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: flex-start;
+  align-content: flex-start;
+  border: 1px solid #b3a7a7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.opt {
+  height: 70px;
+  // border: 1px gray dotted;
+  margin: 3px;
+}
+
+.h-200 {
+  margin: 10px;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.fs-7 {
+  font-size: 0.9rem;
+}
+
+.width20 {
+  width: 20vw;
+}
+
+.width75 {
+  width: 75vw;
+  flex-direction: row;
+}
+
+.toolbar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.tool-button {
+  margin: 0.1vw;
+  /* Margin relative to viewport width */
+  text-align: center;
+  white-space: pre-wrap;
+  width: 9vw;
+  /* Width relative to viewport width */
+  height: 10vh;
+  /* Height relative to viewport height */
+  font-size: 0.8rem;
+  /* Font size relative to viewport width */
+  border-radius: 0.5vw;
+  /* Border radius relative to viewport width */
+  transition: all 0.3s ease;
+  padding: 0.1vw;
+  /* Padding relative to viewport width */
+  border: 2px thin #8da0b4;
+}
+
+.addIcon {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.tool-button:hover {
+  background-color: #8da0b4;
+  color: #fff;
+}
+
+.tool-button i {
+  margin-right: 10px;
+}

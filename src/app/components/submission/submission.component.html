@@ -1,0 +1,98 @@
+<div class="container"  [formGroup]="formPreview">
+    <div class="card mt-4 border-light-subtle">
+      <h5 class="card-header">{{ formPreview?.get('title')?.value }}</h5>
+      <div class="card-body">
+        <p>{{ formPreview?.get('description')?.value }}</p>
+  
+        <!-- Display the dynamic fields -->
+        <div formArrayName="arrayForm" *ngIf="formPreview.get('arrayForm')">
+          <div *ngFor="let field of formPreview.get('arrayForm')?.controls; let i = index" [formGroupName]="i">
+            
+            <!-- Text Input -->
+            <div *ngIf="field.value.type === 'text'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <input type="text" class="form-control" [value]="field.get('value').value">
+            </div>
+            
+            <!-- Textarea -->
+            <div *ngIf="field.value.type === 'textarea'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <textarea class="form-control" rows="3">{{ field.get('value').value }}</textarea>
+            </div>
+  
+            <!-- Checkbox -->
+            <div *ngIf="field.value.type === 'checkbox'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <input type="checkbox" [checked]="field.get('value').value">
+            </div>
+  
+            <!-- Radio Button -->
+            <div *ngIf="field.value.type === 'radio'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <div class="form-check" *ngFor="let option of field.get('options').value">
+                <input class="form-check-input" type="radio" [value]="option" [name]="'radio-' + i">
+                <label class="form-check-label">{{ option }}</label>
+              </div>
+            </div>
+  
+            <!-- Dropdown -->
+            <div *ngIf="field.value.type === 'dropdown'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <select class="form-select">
+                <option *ngFor="let option of field.get('options').value" [value]="option">{{ option }}</option>
+              </select>
+            </div>
+  
+            <!-- Date Picker -->
+            <div *ngIf="field.value.type === 'date'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <input type="date" class="form-control" [value]="field.get('value').value">
+            </div>
+  
+            <!-- File Upload -->
+            <div *ngIf="field.value.type === 'file'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <input type="file" class="form-control">
+            </div>
+  
+            <!-- Number Input -->
+            <div *ngIf="field.value.type === 'number'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <input type="number" class="form-control" [value]="field.get('value').value">
+            </div>
+  
+            <!-- Email Input -->
+            <div *ngIf="field.value.type === 'email'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <input type="email" class="form-control" [value]="field.get('value').value">
+            </div>
+  
+            <!-- Password Input -->
+            <div *ngIf="field.value.type === 'password'" class="mb-3">
+              <label>{{ field.get('title').value }}</label>
+              <input type="password" class="form-control" [value]="field.get('value').value">
+            </div>
+  
+            <!-- Label Information -->
+            <div *ngIf="field.value.type === 'label'" class="mb-3">
+              <div class="alert alert-secondary" role="alert">
+                {{ field.get('title').value }}
+              </div>
+            </div>
+  
+            <!-- Link -->
+            <div *ngIf="field.value.type === 'link'" class="mb-3">
+              <a href="{{ field.get('value').value }}" class="alert-link">{{ field.get('title').value }}</a>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Submit Button -->
+    <div class="d-grid gap-2 col-3 mx-auto mt-3" *ngIf="formPreview.get('arrayForm')?.controls?.length > 0">
+      <button class="btn btn-primary" (click)="sendForm()">Send Form</button>
+    </div>
+  </div>
+  
