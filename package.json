@@ -1,48 +1,48 @@
 {
   "name": "formyfinite",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@11.19.0",
   "engines": {
-    "node": ">=24.0.0 <25"
+    "node": ">=24 <25"
   },
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "concurrently \"node --watch server/index.js\" \"ng serve --proxy-config proxy.conf.json\"",
     "build": "ng build",
-    "test": "node --test tests/*.test.js",
-    "test:e2e": "playwright test",
-    "demo": "node scripts/demo.js"
+    "start": "node api/start.js",
+    "dev": "concurrently \"node --watch api/start.js\" \"ng serve --proxy-config proxy.json\"",
+    "demo": "node tools/demo.js",
+    "test": "node --test test/*.test.js",
+    "test:browser": "playwright test",
+    "format": "prettier --write web api test tools *.json"
   },
   "dependencies": {
-    "@angular/cdk": "^21.2.0",
     "@angular/common": "^21.2.0",
     "@angular/compiler": "^21.2.0",
     "@angular/core": "^21.2.0",
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
-    "bcryptjs": "^3.0.2",
-    "cookie-parser": "^1.4.7",
-    "dotenv": "^17.2.0",
-    "express": "^5.1.0",
-    "express-rate-limit": "^8.1.0",
-    "helmet": "^8.1.0",
-    "mongoose": "^8.19.0",
+    "@angular/cdk": "^21.2.0",
     "rxjs": "~7.8.2",
     "tslib": "^2.8.1",
-    "zod": "^4.1.0"
+    "express": "^5.2.1",
+    "mongoose": "^8.24.0",
+    "helmet": "^8.3.0",
+    "cookie-parser": "^1.4.7",
+    "express-rate-limit": "^8.7.0",
+    "zod": "^4.1.0",
+    "dotenv": "^17.2.0"
   },
   "devDependencies": {
     "@angular/build": "^21.2.0",
     "@angular/cli": "^21.2.0",
     "@angular/compiler-cli": "^21.2.0",
-    "@playwright/test": "^1.56.0",
+    "typescript": "~5.9.3",
     "concurrently": "^9.2.0",
-    "mongodb-memory-server": "^10.2.0",
-    "prettier": "^3.9.7",
-    "supertest": "^7.1.0",
-    "typescript": "~5.9.3"
-  },
-  "packageManager": "pnpm@11.19.0"
+    "supertest": "^7.2.0",
+    "mongodb-memory-server": "^10.4.0",
+    "@playwright/test": "^1.56.0",
+    "prettier": "^3.9.0"
+  }
 }
