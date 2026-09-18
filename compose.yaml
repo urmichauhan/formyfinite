@@ -1,0 +1,23 @@
+services:
+  website:
+    build: .
+    ports: ["3000:3000"]
+    environment:
+      NODE_ENV: development
+      APP_ORIGIN: http://localhost:3000
+      MONGODB_URI: mongodb://database:27017/formyfinite
+      DATA_ENCRYPTION_KEY: ${DATA_ENCRYPTION_KEY:?Generate the key in .env first}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+    depends_on:
+      database:
+        condition: service_healthy
+  database:
+    image: mongo:8.0
+    volumes: ["form-data:/data/db"]
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+volumes:
+  form-data:

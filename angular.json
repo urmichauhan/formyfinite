@@ -13,9 +13,7 @@
             "index": "web/index.html",
             "tsConfig": "tsconfig.app.json",
             "outputPath": "dist/formyfinite",
-            "styles": [
-              "web/styles.css"
-            ]
+            "styles": ["web/styles.css"]
           },
           "configurations": {
             "production": {
