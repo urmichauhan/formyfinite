@@ -1,0 +1,1 @@
+The original Angular 16 source remains in ../src for reference and is not built. This lockfile preserves the pre-existing user changes. The active Angular 21 app is ../client, and pnpm-lock.yaml is the active dependency lockfile. No legacy API endpoints or encryption helpers are used by the new app.
